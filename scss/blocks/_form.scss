@@ -1,0 +1,158 @@
+.form-login {
+
+}
+
+.form-login__user-box {
+  position: relative;
+}
+
+.form-login__input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  outline: none;
+  background-color: transparent;
+}
+
+.form-login__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  color: #ffffff;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.form-login__input:focus ~ .form-login__label,
+.form-login__input:valid ~ .form-login__label {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 12px;
+}
+
+
+.form-login__submit-box {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  margin-top: 40px;
+  transition: 0.5s;
+}
+
+.form-login__span {
+  position: absolute;
+  display: block;
+  &:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(0,0,0, 0), #03e9f4);
+    animation: animate 1s linear infinite;
+  }
+
+  &:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background-image: linear-gradient(180deg, rgba(0,0,0, 0), #03e9f4);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+  }
+
+  &:nth-child(3) {
+    right: -100%;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-image: linear-gradient(270deg, rgba(0,0,0, 0), #03e9f4);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.5s;
+  }
+
+  &:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background-image: linear-gradient(360deg, rgba(0,0,0, 0), #03e9f4);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+  }
+
+}
+
+@keyframes animate {
+  0% {
+    left: -100%;
+  }
+  50%,100% {
+    left: 100%;
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+  50%,100% {
+    top: 100%;
+  }
+}
+
+@keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+  50%,100% {
+    right: 100%;
+  }
+}
+
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,100% {
+    bottom: 100%;
+  }
+}
+
+
+
+.form-login__btn {
+  background-color: transparent;
+  border: none;
+  padding: 10px 20px;
+  color: #03e9f4;;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 4px;
+  font-size: 18px;
+  &:hover {
+    background-color: #03e9f4;
+    color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03e9f4,
+    0 0 25px #03e9f4,
+    0 0 50px #03e9f4,
+    0 0 100px #03e9f4;
+
+  }
+}
+
+.form-login__submit-box:hover {
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03e9f4,
+              0 0 25px #03e9f4,
+              0 0 50px #03e9f4,
+              0 0 100px #03e9f4;
+
+}
