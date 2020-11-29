@@ -468,6 +468,11 @@ img {
   background-color: transparent;
 }
 
+.form-login__input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 130px rgba(0, 0, 0, 0.8) inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
 .form-login__label {
   position: absolute;
   top: 0;
